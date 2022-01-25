@@ -1,6 +1,0 @@
-The exciting new version of Scala 3 brings many improvements and new features. Here we provide you with a quick overview
-of the most important changes. If you want to dig deeper, there are a few references at your disposal.
-Scala 3 is a complete overhaul of the Scala language. At its core, many aspects of the type-system have been changed
-to be more principled. While this also brings exciting new features along (like union types), first and foremost,
-it means that the type-system gets (even) less in your way and for instance type-inference and overload resolution
-are much improved.
