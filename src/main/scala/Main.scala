@@ -27,7 +27,7 @@ object Main {
           .through(text.lines)
           .through(words)
 
-        def wc: IO[List[String]] =
+        def wordFreq: IO[List[String]] =
             someInputTextFile.fold(Map.empty[String, Int]) { (count, word) =>
                 count + (word -> (count.getOrElse(word, 0) + 1))
             }
@@ -38,7 +38,7 @@ object Main {
               .compile
               .toList
 
-        val result = wc.unsafeRunSync()
+        val result = wordFreq.unsafeRunSync()
     }
 }
 
