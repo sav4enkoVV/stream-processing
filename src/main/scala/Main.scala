@@ -33,12 +33,12 @@ object Main {
             }
               .map(_.foldLeft("") {
                   case (accumulator, (word, count)) =>
-                      accumulator + println( s"$word = $count\n")
+                      accumulator + s"$word = $count\n"
               })
               .compile
               .toList
 
-        val result = wordFreq.unsafeRunSync()
+        val result = wordFreq.map(println(_)).unsafeRunSync()
     }
 }
 
